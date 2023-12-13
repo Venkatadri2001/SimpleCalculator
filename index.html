@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>CALCULATOR</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Calculator">
+        <meta name="keywords" content="HTML, CSS, javascript">
+        <meta name="author" content="Venkatadri">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style input ="text/css">
+        body{
+            background-color: whitesmoke;
+        }
+        input[type=text]
+        {
+            background-color: whitesmoke;
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
+            color: red;
+        }
+        input[type = button]
+        {
+            background-color:rgb(26, 213, 213);
+            height: 50px;
+            width: 50px;
+            font-size: 20px;
+            color:blue;
+        }
+        h4{
+            background-color: lightgreen;
+            font-size: 50px;
+            
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <div >
+        <h4 style="text-align: center ">USE THIS CALCULATOR</h4>
+    </div>
+    
+    <table border="3" align="center" style="border-color: rgb(1, 1, 1);">
+        <tr>
+            <td colspan="3"><input type="text" id = "res" /></td>
+            <td><input type="button" value="C" onclick="clr()"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="fun('1')"/></td>
+            <td><input type="button" value="2" onclick="fun('2')"/></td>
+            <td><input type="button" value="3" onclick="fun('3')"/></td>
+            <td><input type="button" value="/" onclick="fun('/')"/></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="fun('4')"/></td>
+            <td><input type="button" value="5" onclick="fun('5')"/></td>
+            <td><input type="button" value="6" onclick="fun('6')"/></td>
+            <td><input type="button" value="*" onclick="fun('*')"/></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="fun('7')"/></td>
+            <td><input type="button" value="8" onclick="fun('8')"/></td>
+            <td><input type="button" value="9" onclick="fun('9')"/></td>
+            <td><input type="button" value="+" onclick="fun('+')"/></td>
+
+
+        </tr>
+        <tr>
+            <td><input type = "button" value = "." onclick="fun('.')"></td>
+            <td><input type="button" value="0" onclick="fun('0')"/></td>
+          
+            <td ><input type="button" value="=" onclick="sol()"/></td>
+            
+            <td><input type="button" value="-" onclick="fun('-')"/></td>
+
+        </tr>
+        <script>
+           
+            function fun(a)
+            {
+                document.getElementById("res").value+=a
+            }
+            function sol()
+            {
+                let x = document.getElementById("res").value
+                let y = eval(x)
+                document.getElementById("res").value = y
+                console.log(y);
+            }
+            function clr()
+            {
+                document.getElementById("res").value = ""
+            }
+        </script>
+    </table>
+    
+</body>
+</html>
